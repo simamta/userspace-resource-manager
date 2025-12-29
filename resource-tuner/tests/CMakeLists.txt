@@ -43,7 +43,6 @@ if(BUILD_TESTS)
     # Unit Test: rt_serverrequests_tests (single binary with all unit tests)
     # ----------------------------------------------------------------------------
     
-    # Let CMake locate Catch2 v3 from the Yocto sysroot
     find_package(Catch2 3 REQUIRED)
 
     # Collect all unit test sources in one variable
@@ -88,8 +87,6 @@ if(BUILD_TESTS)
     # ----------------------------------------------------------------------------
     # Component tests (Catch2 runner) — SINGLE TARGET
     # ----------------------------------------------------------------------------
-    # Source list for component tests + Catch2 main TU
-    # Let CMake locate Catch2 v3 from the Yocto sysroot
     set(COMPONENT_TEST_SOURCES
         # Catch2-converted file(s)
         ${CMAKE_CURRENT_SOURCE_DIR}/Component/RequestQueueTests_catch.cpp
